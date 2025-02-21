@@ -190,13 +190,11 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-&bt BT_CLR_ALL  &bt BT_CLR  &out OUT_TOG  &bl BL_TOG  &trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12
-&bootloader     &bt BT_NXT  &trans        &bl BL_INC  &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans          &bt BT_PRV  &trans        &bl BL_DEC  &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10
-                                          &trans      &trans  &trans  &trans
+&bt BT_CLR_ALL  &bt BT_CLR  &out OUT_TOG  &bl BL_TOG  &trans         &kp KP_MINUS     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SLASH
+&bootloader     &bt BT_NXT  &bt BT_SEL 0  &bl BL_INC  &trans         &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT
+&trans          &bt BT_PRV  &bt BT_SEL 1  &bl BL_DEC  &trans         &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ASTERISK
+                                          &trans      &kp BACKSPACE  &kp SPACE        &kp KP_ENTER
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
