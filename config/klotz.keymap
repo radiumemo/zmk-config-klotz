@@ -115,7 +115,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp LC(RIGHT) LC(LEFT_ARROW)>,
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
@@ -143,6 +143,10 @@
 &kp C_PREVIOUS    &kp LC(X)         &kp LC(C)       &kp LC(V)     &trans             &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp MB2
                                                     &kp ESCAPE    &kp ENTER          &trans          &trans
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp LS(LC(RIGHT)) LS(LC(LEFT_ARROW))>,
+                <&inc_dec_kp LS(END) LS(HOME)>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -216,13 +220,11 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-&trans    &trans    &trans     &trans      &trans  &msc MOVE_DOWN  &mkp MB4        &mmv MOVE_UP    &mkp MB5         &trans
-&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &trans  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
-&trans    &trans    &trans     &trans      &trans  &msc MOVE_UP    &trans          &mkp MB3        &trans           &trans
-                               &trans      &trans  &mkp MB1        &mkp MB2
+&kp LEFT_BRACKET  &kp LEFT_BRACE  &trans  &trans   &trans         &trans     &trans  &trans  &trans  &kp RIGHT_BRACKET
+&kp GRAVE         &trans          &trans  &trans   &trans         &trans     &trans  &trans  &trans  &kp SINGLE_QUOTE
+&kp MINUS         &trans          &trans  &trans   &trans         &trans     &trans  &trans  &trans  &kp EQUAL
+                                          &kp TAB  &kp BACKSPACE  &kp SPACE  &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
