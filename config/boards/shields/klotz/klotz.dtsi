@@ -27,7 +27,6 @@
 
 	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
-		label = "KSCAN";
 
 		diode-direction = "col2row";
 		row-gpios
@@ -40,7 +39,6 @@
 
 	encoder_left: encoder_left {
 		compatible = "alps,ec11";
-		label = "ENCODER_LEFT";
 		a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH )>;
 		b-gpios = <&pro_micro 19 (GPIO_ACTIVE_HIGH )>;
 		steps = <24>;
@@ -49,9 +47,8 @@
 
 	encoder_right: encoder_right {
 		compatible = "alps,ec11";
-		label = "ENCODER_RIGHT";
-		a-gpios = <&pro_micro 19 (GPIO_ACTIVE_HIGH )>;
-		b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH )>;
+		a-gpios = <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		steps = <24>;
 		//status = "disabled";
 	};
