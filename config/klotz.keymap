@@ -99,7 +99,7 @@
                                                &lt 3 TAB       &lt 2 BACKSPACE  &lt 1 SPACE  &lt 4 DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(RIGHT_ARROW) LC(LEFT_ARROW) &inc_dec_kp PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW &inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
 
@@ -111,7 +111,7 @@
                                                     &kp ESCAPE    &kp ENTER          &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LS(LC(RIGHT)) LS(LC(LEFT)) &inc_dec_kp LS(HOME) LS(END)>;
+            sensor-bindings = <&inc_dec_kp LS(LC(RIGHT_ARROW)) LS(LC(LEFT_ARROW)) &inc_dec_kp LS(END) LS(HOME)>;
         };
 
 
