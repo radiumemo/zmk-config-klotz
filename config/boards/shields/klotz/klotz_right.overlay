@@ -20,6 +20,6 @@
 		;
 };
 
-&encoder_right
+&encoder_right {
 	status = "okay";
 };
