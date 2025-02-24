@@ -40,7 +40,7 @@
     flavor = "tap-preferred";
     tapping-term-ms = <250>;
     quick-tap-ms = <250>;
-    require-prior-idle-ms = <70>;
+    require-prior-idle-ms = <30>;
 };
 
 &lt {
@@ -54,21 +54,21 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-
-        combo_minus {
-            bindings = <&kt MINUS>;
-            key-positions = <20 21>;
-            timeout-ms = <50>;
-        };
-
         combo_backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <29 28>;
+            timeout-ms = <50>;
+        };
+
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+            timeout-ms = <50>;
+        };
+
+        combo_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <20 21>;
             timeout-ms = <50>;
         };
 
@@ -134,9 +134,9 @@
 
         sym_layer {
             bindings = <
-&kp LEFT_BRACKET  &kp LEFT_BRACE  &trans  &trans   &trans         &trans     &trans  &trans  &trans  &kp RIGHT_BRACKET
-&kp GRAVE         &trans          &trans  &trans   &trans         &trans     &trans  &trans  &trans  &kp SINGLE_QUOTE
-&kp MINUS         &trans          &trans  &trans   &trans         &trans     &trans  &trans  &trans  &kp EQUAL
+&kp LEFT_BRACKET  &kp LEFT_BRACE  &trans  &trans   &trans         &trans     &trans  &trans  &kp RIGHT_BRACE    &kp RIGHT_BRACKET
+&kp GRAVE         &trans          &trans  &trans   &trans         &trans     &trans  &trans  &trans             &kp SINGLE_QUOTE
+&kp MINUS         &trans          &trans  &trans   &trans         &trans     &trans  &trans  &trans             &kp EQUAL
                                           &kp TAB  &kp BACKSPACE  &kp SPACE  &trans
             >;
         };
